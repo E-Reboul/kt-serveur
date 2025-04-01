@@ -19,7 +19,7 @@ const getAll = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json(users);
     } catch (e) {
-        console.error(`❌ Error fetching all users: ${(e as Error).message}`);
+        console.error(`Error fetching all users: ${(e as Error).message}`);
         res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -42,7 +42,7 @@ const getById = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json(user);
     } catch (e) {
-        console.error(`❌ Error fetching user by ID: ${(e as Error).message}`);
+        console.error(`Error fetching user by ID: ${(e as Error).message}`);
         res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -70,7 +70,7 @@ const create = async (req: Request, res: Response): Promise<void> => {
 
         res.status(201).json({ message: "User created successfully!", user: createdUser });
     } catch (e) {
-        console.error(`❌ Error creating user: ${(e as Error).message}`);
+        console.error(`Error creating user: ${(e as Error).message}`);
         res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -105,7 +105,7 @@ const update = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json({ message: "User updated successfully!", user: updatedUser });
     } catch (e) {
-        console.error(`❌ Error updating user: ${(e as Error).message}`);
+        console.error(`Error updating user: ${(e as Error).message}`);
         res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -128,7 +128,7 @@ const deleteById = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json({ message: "User deleted successfully!", user: deletedUser });
     } catch (e) {
-        console.error(`❌ Error deleting user: ${(e as Error).message}`);
+        console.error(`Error deleting user: ${(e as Error).message}`);
         res.status(500).json({ message: "Internal server error" });
     }
 };

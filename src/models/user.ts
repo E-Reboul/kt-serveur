@@ -20,7 +20,7 @@ const getAll = async (): Promise<UserListDto|undefined> => {
 
         return users;
     } catch(e) {
-        console.warn(`❌ Error fetching all users: ${(e as Error).message}`);
+        console.warn(`Error fetching all users: ${(e as Error).message}`);
         return undefined;
     }
 }
@@ -44,7 +44,7 @@ const getById = async (id: number): Promise<UserDto|undefined> => {
 
         return user[0];
     } catch(e) {
-        console.warn(`❌ Error fetching user by id: ${(e as Error).message}`);
+        console.warn(`Error fetching user by id: ${(e as Error).message}`);
         return undefined;
     }
 }
@@ -64,7 +64,7 @@ const create = async (user: CreateUserDto): Promise<boolean> => {
         console.log(user);
         return true;
     } catch(e) {
-        console.warn(`❌ Error creating user: ${(e as Error).message}`);
+        console.warn(`Error creating user: ${(e as Error).message}`);
         return false;
     }
 }
@@ -89,7 +89,7 @@ const update = async (id: number, user: Partial<UpdateUserDto>): Promise<boolean
 
         return true;
     } catch (e) {
-        console.warn(`❌ Error updating user: ${(e as Error).message}`);
+        console.warn(`Error updating user: ${(e as Error).message}`);
         return false;
     }
 };
@@ -110,7 +110,7 @@ const deleteById = async (id: number): Promise<UserDto|undefined> => {
 
         return user;
     } catch(e) {
-        console.warn(`❌ Error deleting user: ${(e as Error).message}`);
+        console.warn(`Error deleting user: ${(e as Error).message}`);
         return undefined;
     }
 }
