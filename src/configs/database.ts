@@ -28,7 +28,7 @@ export async function testDirectConnection(): Promise<void> {
             user: DB_USER,
             password: DB_PASSWORD,
             database: DB_NAME,
-            port: 3307
+            port: DB_PORT
         });
         console.log("Direct connection successful. Pinging database...");
         await connection.ping();
